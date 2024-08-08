@@ -66,6 +66,43 @@
     echo min(9, 6, 3) . '<br>'; // 3
     echo max(9, 6, 3) . '<br>'; // 9
     ?>
+
+    <?php
+        $str = "Hello";
+        echo "VAR: $str" . '<br>'; // VAR: Hello     // одинарні лапки не підходять VAR: $str
+
+        echo "<input type='text'/>" . '<br>';
+        echo "<input type=\"text\"/>" . '<br>'; // якщо подвійні лапки -  \"text\" 
+
+        $length = strlen($str);
+        echo $length . '<br>';
+
+        echo trim("   one   ") . '<br>';
+
+        echo strtolower("LOWER") . '<br>';
+        echo strtoupper("upper") . '<br>';
+
+        echo md5("qwerty") . '<br>'; // d8578edf8458ce06fbc5bb76a58c5ca4 хеш
+
+    ?>
+
+    <?php
+        $str = "Hello";
+        if ($str == "Hello") {
+            echo "YES" . '<br>';
+        } else {
+            echo "NO" . '<br>';
+        }
+        // якщо всередині if/else лише 1 рядок, можна не використовувати фігурні лапки
+        if ($str == "Hello")
+            echo "TRUE" . '<br>';
+        else 
+            echo "FALSE" . '<br>';
+
+
+        $arr = [1, 0.5, true, "text", 46];
+        echo $arr[1] . '<br>'
+    ?>
     
 </body>
 </html>
